@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\PostPageController;
 use App\Http\Controllers\TaskPageController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,12 @@ Route::delete('/tasks/{task}', [TaskPageController::class, 'destroy']);
 Route::post('/tasks/{task}/assign', [TaskPageController::class, 'assign']);
 Route::delete('/tasks/{task}/students/{student}', [TaskPageController::class, 'unassign']);
 Route::patch('/tasks/{task}/status', [TaskPageController::class, 'updateStatus']);
+
+// Post Management CRUD
+Route::get('/posts', [PostPageController::class, 'index']);
+Route::get('/posts/create', [PostPageController::class, 'create']);
+Route::post('/posts', [PostPageController::class, 'store']);
+Route::get('/posts/{post}', [PostPageController::class, 'show']);
+Route::get('/posts/{post}/edit', [PostPageController::class, 'edit']);
+Route::put('/posts/{post}', [PostPageController::class, 'update']);
+Route::delete('/posts/{post}', [PostPageController::class, 'destroy']);

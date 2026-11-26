@@ -184,6 +184,93 @@
         .inline-form {
             display: inline;
         }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .table-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            align-items: center;
+        }
+
+        .field-error {
+            color: #b91c1c;
+            font-size: 0.85rem;
+            margin-top: 0.35rem;
+        }
+
+        .input-invalid {
+            border-color: #dc2626;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #64748b;
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.55);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            z-index: 50;
+        }
+
+        .modal-backdrop.is-open {
+            display: flex;
+        }
+
+        .modal-dialog {
+            background: #fff;
+            border-radius: 8px;
+            max-width: 440px;
+            width: 100%;
+            padding: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-dialog h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .modal-dialog p {
+            margin: 0 0 1.25rem;
+            color: #475569;
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.6rem;
+        }
+
+        @media (max-width: 640px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+                padding: 1rem;
+            }
+
+            .navbar a {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+
+            .page-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+        }
     </style>
 </head>
 
@@ -193,6 +280,8 @@
         <div>
             <a href="/tasks">All Tasks</a>
             <a href="/tasks/create">+ New Task</a>
+            <a href="/posts">Posts</a>
+            <a href="/posts/create">+ New Post</a>
             <a href="/api/tasks">JSON API</a>
             <a href="/docs/api">API Docs</a>
         </div>
